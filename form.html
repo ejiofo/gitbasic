@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My first form</title>
+    </head> 
+ 
+<div>
+<body style="background-color:aquamarine;">
+     <h1 style="font-family:verdana;">Kindly fill the form</h1> 
+   <form id="form" name="Signup" action="/action_page.php" onsubmit="return validateForm()" method="post" required >
+    <fieldset>
+        <legend style="font-family:courier; font-size:160%">Signup</legend>
+        <label for="firstname">Firstname: </label><br>
+        <input type="text" name="firstname" id="firstname" required placeholder="Firstname"><br><br>
+        <label for="fullname">Lastname: </label><br>
+        <input type="text" name="lastname" id="lastname" required:true placeholder="Lastname"><br><br>
+        <label for="email">Email: </label><br>
+        <input type="email" name="email" id="email" required:true placeholder="Contact's email"><br><br>
+        <label for="phonenumber">Phonenumber: </label><br>
+        <input type="tel" name="phonenumber" id="phonenumber" required:true placeholder="Phonenumber"><br><br>
+        <label for="male">Male</label>
+        <input type="radio" name="sex" id="male" value="male">
+        <label for="female">Female</label>
+        <input type="radio" name="sex" id="female" value="female"><br><br>
+        <label for="password">Password: </label><br>
+        <input type="password" name="password" id="password" placeholder="*********"><br><br>
+        <label for="submit"></label><br>
+        <input type="button" value="Submit" id="submit button" on click="alert('success')">
+    </fieldset>
+   </form>
+</body>
+</div>
+<script>
+    function validateForm() {
+  var x = document.forms["signup"]["firstname"].value;
+  if (x = "" || x == null) {
+    alert("Name must be filled out");
+    return false;
+  }
+  var x = document.forms["signup"]["lastname"].value;
+  if (x = "" || x == null) {
+    alert("lastname must be filled out");
+    return false;
+  }
+  var x = document.forms["signup"]["email"].value;
+  if (x = "" || x == null) {
+    alert("email must be filled out");
+    return false;
+  }
+  var x = document.forms["signup"]["Phonenumber"].value;
+  if (x = "" || x == null) {
+    alert("Phonenumber must be filled out");
+    return false;
+  }
+  var x = document.forms["signup"]["Password"].value;
+  if (x = "" || x == null) {
+    alert("Input password");
+    return false;
+  }
+} 
+
+</script>
+</html>
